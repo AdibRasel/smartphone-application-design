@@ -96,3 +96,123 @@
 
 
 
+12 > adb devices
+    ১২ > adb devices একটি Android Debug Bridge (ADB) কমান্ড হলো, যা Android ডিভাইস অথবা এমুলেটর যেগুলি আপনার কম্পিউটারে সংযুক্ত আছে তা পর্যবেক্ষণ করে সংজ্ঞান করে। এটি একটি ডিভাইস অথবা এমুলেটর আপনার মোবাইল অ্যাপ্লিকেশন ডেভেলপমেন্টের সময় অত্যন্ত গুরুত্বপূর্ণ হতে পারে, কারণ এটি ডিভাইসে অ্যাপ্লিকেশন ইনস্টল করার জন্য ব্যবহার হয় এবং ডিভাইসে ডেভেলপমেন্ট মোডে সময় করে ডেভেলপারের মধ্যে অ্যাপ্লিকেশন টেস্ট করার সুযোগ সরবরাহ করে।
+
+    adb devices কমান্ডটি চালানোর ফলে, এটি সংযুক্ত ডিভাইস এবং এমুলেটরের তালিকা দেখাবে যেখানে প্রতিটি ডিভাইসের সিরিয়াল নম্বর এবং ডিভাইসের ধরণ বা স্টেটাস উল্লেখ থাকবে। ডিভাইস যদি সঠিকভাবে চলছে এবং সংযুক্ত থাকে, তাহলে এই কমান্ডের আউটপুটে দেখা যাবে।
+
+    উদাহরণ:
+
+    arduino
+    Copy code
+    List of devices attached
+    emulator-5554   device
+    1234abcd        device
+    এই উদাহরণে, আপনি দেখতে পাচ্ছেন যে দুটি ডিভাইস (একটি এমুলেটর এবং একটি ফিজিক্যাল ডিভাইস) সংযুক্ত আছে এবং ডেভাইস সিরিয়াল নম্বর সহ স্টেটাস দেখা যাচ্ছে।
+
+    যদি adb devices কমান্ড চালানোর পরে কোন ডিভাইস বা এমুলেটর দেখা না দেওয়া থাকে, তবে এটি ডিভাইস বা এমুলেটরটি ঠিকভাবে চালানো হয়নি বা ডিভাইস ড্রাইভার সঠিকভাবে ইনস্টল করা হয়নি এমন কিছু সমস্যা সূচনা করতে পারে।
+
+
+13 > show error end solve this steps
+    The error message you're encountering indicates that there is a Java version compatibility issue in your Android project. The Android Gradle plugin is expecting Java 17, but your current JDK version is Java 11.
+
+    To resolve this issue, you can follow these steps:
+
+    Install Java 17:
+
+    You need to install Java 17 on your system if it's not already installed. You can download and install it from the official Oracle website or use an OpenJDK distribution. Make sure to set up the environment variables correctly.
+
+    Update your JAVA_HOME environment variable:
+
+    After installing Java 17, you should update your JAVA_HOME environment variable to point to the directory where Java 17 is installed. You can do this by going to your system's environment variables settings and editing the JAVA_HOME variable.
+
+    Configure Gradle to use Java 17:
+
+    You can configure Gradle to use Java 17 for your Android project by adding the following lines to your project's gradle.properties file:
+
+    javascript
+    Copy code
+    org.gradle.java.home=/path/to/your/java17
+    Replace /path/to/your/java17 with the actual path to your Java 17 installation.
+
+    Sync Gradle:
+
+    After making these changes, sync your Gradle project again by clicking the "Sync Project with Gradle Files" button in your IDE, or by running the ./gradlew script in your project's root directory.
+
+    Rebuild your Android project:
+
+    Finally, try running your Capacitor project again by executing the necessary commands. It should now use Java 17 and hopefully, the build will succeed.
+
+    After following these steps, if you encounter any other issues or errors, you can provide more details for further assistance.
+
+
+
+
+    User
+    Java 17 এর কোন ভার্সন টি নামাতে হবে?
+    ChatGPT
+    Java 17 এর official নামটি "Java 17" হলো। অফিসিয়ালি, Oracle এবং OpenJDK উভয় ইমপ্লিমেন্টেশনে এটি "Java 17" হিসেবে পরিচিত করা হয়েছে।
+
+    আপনি যদি কোন ডিস্ট্রিবিউশনের জন্য Java 17 ইনস্টল করতে যাচ্ছেন, তাহলে সাধারণভাবে সেই ডিস্ট্রিবিউশনের ওয়েবসাইট থেকে ডাউনলোড করতে পারেন এবং সেটি নামাতে স্যাগেস্ট করা "Java 17" অথবা "JDK 17"।
+
+    আপনি কোন IDE বা কমান্ড লাইন থেকে এই ইনস্টল করা JDK ব্যবহার করতে পারেন যতে আপনার প্রজেক্ট Java 17 এর সাথে কম্প্যাটিবল হয়।
+
+
+
+
+    User
+    কমান্ড লাইন থেকে কি ভাবে ইনস্টল করবো?
+    ChatGPT
+    কমান্ড লাইন থেকে Java 17 ইনস্টল করার জন্য নিম্নলিখিত পদক্ষেপগুলি অনুসরণ করতে হবে:
+
+    ডাউনলোড করুন:
+    প্রথমে, আপনি আপনার প্রাথমিক কমান্ড লাইন টারমিনাল বা কনসোল উইন্ডো খুলুন এবং নিম্নলিখিত কমান্ড টি ব্যবহার করে ওপেনজিডিকের সাথে সাথে ডাউনলোড করতে পারেন:
+
+    bash
+    Copy code
+    wget https://download.java.net/java/GA/jdk17/0d483333a00540d886896b29f96e9492/35/GPL/openjdk-17_linux-x64_bin.tar.gz
+    অথবা
+
+    bash
+    Copy code
+    curl -O https://download.java.net/java/GA/jdk17/0d483333a00540d886896b29f96e9492/35/GPL/openjdk-17_linux-x64_bin.tar.gz
+    এই কমান্ডগুলির মাধ্যমে সর্বশেষ Java 17 এর লিঙ্ক থেকে জিডিকে ডাউনলোড করবেন।
+
+    আরক্ষণ করুন:
+    ফাইলটি ডাউনলোড হলে, এটি আপনার সিস্টেমে আরক্ষণ করুন।
+
+    আনটার টারমিনাল থেকে ইনস্টল করুন:
+    নিম্নলিখিত কমান্ডটি ব্যবহার করে জিডিকে আনটার টারমিনাল থেকে ইনস্টল করুন:
+
+    bash
+    Copy code
+    sudo tar -xzvf openjdk-17_linux-x64_bin.tar.gz -C /usr/local/
+    এই কমান্ডটি জিডিকে আপনার সিস্টেমে /usr/local/ ডিরেক্টরিতে ইনস্টল করবে।
+
+    জাভা ভার্সন চয়ন করুন:
+    ইনস্টলেশন শেষ হলে, আপনি নিম্নলিখিত কমান্ড দিয়ে জাভা ভার্সন চয়ন করতে পারেন:
+
+    bash
+    Copy code
+    sudo update-alternatives --install /usr/bin/java java /usr/local/jdk-17/bin/java 1
+    sudo update-alternatives --install /usr/bin/javac javac /usr/local/jdk-17/bin/javac 1
+    ডিফল্ট জাভা ভার্সন চয়ন করুন:
+    ডিফল্ট জাভা ভার্সন হিসেবে Java 17 চয়ন করতে নিম্নলিখিত কমান্ডটি ব্যবহার করুন:
+
+    sql
+    Copy code
+    sudo update-alternatives --config java
+    এটি আপনাকে একটি মেনু দেখাবে যেখানে আপনি Java 17 চয়ন করতে পারবেন।
+
+    সফলভাবে ইনস্টল হয়েছে তা পরীক্ষা করুন:
+    আপনি ইনস্টলেশন সফলভাবে সম্পন্ন হয়েছে কিনা নিম্নলিখিত কমান্ডটি ব্যবহার করে চেক করতে পারেন:
+
+    Copy code
+    java -version
+    এটি আপনার ইনস্টল করা Java ভার্সন দেখাবে।
+
+    এই পদক্ষেপগুলি অনুসরণ করার পর, আপনি সফলভাবে Java 17 ইনস্টল করা হবে এবং আপনার প্রজেক্ট সেটিংসে সেট করতে পারবেন।
+
+
+
+
