@@ -1,0 +1,102 @@
+.FullApp {
+    background-color: #ffcfb0;
+}
+
+
+
+/* Full_App_Registration_page start  */
+.Full_App_Registration_page {
+    background-image: url(../../assets/image/Registration_Bg.png);
+    min-width: 400px;
+    max-width: 95%;
+    min-height: 700px;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: cover;
+}
+/* Full_App_Registration_page end  */
+
+
+
+
+
+
+/* Registration Image serction start  */
+.RgImage{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+}
+.RgTitle{
+    color:white;
+    padding-top: 20px;
+}
+.RgTitle h1{
+    display: inline;
+    font-size: 22px;
+    font-weight: 500;
+}
+.RgTitle h2{
+    display: inline;
+    font-size: 18px;
+    font-weight: 100;
+}
+/* Registration Image serction end  */
+
+
+
+
+
+
+
+
+
+/* Registration Form start  */
+.RgForm{
+    width: 80%;
+    margin: auto;
+}
+.RgForm_Input{
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.Reg_Submit{
+    width: 100%;
+    background-color: #ea6343;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 500;
+  }
+/* Registration Form end  */
+
+
+
+
+/* Login or forgate Password section start  */
+.Bottom_SectionRg{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.Bootom_Section_LeftRg{
+    /* background-color: #ea6343; */
+    color: #ea6343;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: 300;
+  }
+
+.Bootom_Section_RightRg{
+    margin-left: auto;
+    /* background-color: #2f2260; */
+    color: #ea6343;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: 300;
+  }
+/* Login or forgate Password section end  */

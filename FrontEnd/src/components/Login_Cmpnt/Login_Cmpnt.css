@@ -1,0 +1,175 @@
+.FullApp{
+    background-color: #ffcfb0;
+}
+
+
+
+/* Full_App_Login_page start  */
+.Full_App_Login_page{
+    background-image: url(../../assets/image/Login_Bg_image.png);
+    min-width: 400px;
+    max-width: 95%;
+    min-height: 700px;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: cover;
+  }
+/* Full_App_Login_page end  */
+
+
+
+
+
+
+/* Logo_Login_Page start  */
+.Logo_Login_Page{
+    height: 165px;
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+  }
+.Logo_Login_Page img{
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 130px 50px -30px #a26060
+  }
+/* Logo_Login_Page end */
+
+
+
+
+
+
+
+
+
+
+
+/* Login_Page_Title start  */
+.Login_Page_Title{
+    padding: 25px;
+    text-align: center;
+}
+.Login_Page_Title h2{
+    font-weight: 100;
+    font-size: 25px;
+    display: inline;
+}
+
+.Login_Page_Title h1{
+    display: inline;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: initial;
+}
+/* Login_Page_Title end */
+
+
+
+
+
+/* Login_Logout_Section start  */
+.Login_Logout_Section{
+    width: 80%;
+    margin: auto;
+}
+.Input_Login_Logout_btn{
+    margin-bottom: 10px;
+}
+/* Login_Logout_Section end  */
+
+
+
+
+
+
+
+
+/* Submit_SignIN start  */
+.Submit_SignIN{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.Submit_SignINBtn{
+    width: 100%;
+    background-color: #2F2260;
+    color: white;
+    padding: 18px;
+    border-radius: 10px;
+    border: 0px;
+    font-size: 18px;
+}
+/* Submit_SignIN end */
+
+
+
+
+
+
+
+/* Login_with_antother_service start  */
+.Login_with_antother_service{
+    text-align: center;
+}
+
+
+
+.Login_Sith_anotehr_service_Top{
+    padding: 20px;
+}
+.Login_Sith_anotehr_service_Top h2{
+    color: #2F2260;
+    font-size: 18px;
+}
+.Login_Sith_anotehr_service_Top span{
+    color: #2F2260;
+}
+
+
+
+
+.Login_Sith_anotehr_service_Bottom{
+    color: white;
+}
+
+
+.Login_With_Btn{
+    background-color: #2F2260;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+/* Login_with_antother_service end */
+
+
+
+
+
+
+/* Create Account or forgate Password section start  */
+.Bottom_Section{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.Bootom_Section_Left{
+    background-color: #2f2260;
+    color: #d2d2d2;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: 300;
+  }
+
+.Bootom_Section_Right{
+    margin-left: auto;
+    background-color: #2f2260;
+    color: #d2d2d2;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: 300;
+  }
+/* Create Account or forgate Password section end  */

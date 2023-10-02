@@ -1,3 +1,23 @@
+.FullApp{
+    background-color: #ffcfb0;
+}
+
+
+
+/* Full_App_Login_page start  */
+.Full_App_Login_page{
+    background-image: url(/src/assets/image/Login_Bg_image.png);
+    min-width: 400px;
+    max-width: 95%;
+    min-height: 700px;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: cover;
+  }
+/* Full_App_Login_page end  */
+
+
 ========== Command List ==========
 
 1 > ionic start FrontEnd blank --type=react --cordova
@@ -212,3 +232,132 @@
     এটি আপনার ইনস্টল করা Java ভার্সন দেখাবে।
 
     এই পদক্ষেপগুলি অনুসরণ করার পর, আপনি সফলভাবে Java 17 ইনস্টল করা হবে এবং আপনার প্রজেক্ট সেটিংসে সেট করতে পারবেন।
+
+
+
+14 > adb kill-server
+    ১৪ > adb kill-server কমান্ড Android Debug Bridge (ADB) সার্ভার প্রক্রিয়াকে বন্ধ করে দেয়। ADB হলো Android ডিভাইসের সাথে যোগাযোগ করার জন্য ব্যবহৃত একটি টুল, এবং এটি ডিভাইসে অ্যাকসেস করার জন্য ব্যবহৃত হয়।
+
+    যখন আপনি adb kill-server কমান্ড চালাতেন, তখন এটি সব চলমান ADB সেশন এবং সার্ভার সব বন্ধ করে দেয়। এটি কোনও ADB সমস্যা বা কনফ্লিক্ট সমাধানের একটি প্রাথমিক পদক্ষেপ হতে পারে, যখন এডিবি অস্বাস্থ্যভাবে চলমান থাকে বা একই পোর্টে একাধিক ADB সার্ভার চলছে।
+
+    এই কমান্ডটি সাধারণভাবে ADB সমস্যা সমাধান করতে ব্যবহৃত হয়, এবং তা কাজ করার পর আপনি আবার adb start-server কমান্ড চালাতে পারেন যদি প্রয়োজন হয়।  
+
+
+15 > adb start-server
+    ১৫ > adb start-server কমান্ড একটি Android Debug Bridge (ADB) সার্ভার প্রক্রিয়াকে আরম্ভ করে। ADB হলো Android ডিভাইসের সাথে যোগাযোগ করার জন্য ব্যবহৃত একটি টুল, এবং এটি ডিভাইসে অ্যাকসেস করার জন্য ব্যবহৃত হয়।
+
+    যখন আপনি adb start-server কমান্ড চালাতেন, তখন এটি ADB সার্ভার প্রক্রিয়াটি চালু করে দেয়। এটি সাধারণভাবে ADB প্রয়োগগুলি ব্যবহার করার জন্য প্রয়োজন হয়, যখন আপনি ডিভাইসে অ্যাকসেস করতে বা ডিভাইস সংযোগ করতে চান।
+
+    adb start-server কমান্ড আপনি ডিভাইস বা এমুলেটরে অ্যাকসেস করার পূর্বে সার্ভারটি চালু করতে ব্যবহার করা হতে পারে, এটি আপনার ডিভাইসে প্রথম সংযোগ করার পরে ব্যবহৃত হতে পারে বা এডিবি সার্ভারে যদি কোনও সমস্যা অথবা কনফ্লিক্ট সাধানো লাগে তখন ব্যবহৃত হতে পারে।
+
+    এই কমান্ডটি সাধারণভাবে ADB সার্ভার সমস্যা সমাধান করতে ব্যবহৃত হয়, যেটি একটি সমস্যা বা কনফ্লিক্ট সমাধানের একটি প্রাথমিক পদক্ষেপ হতে পারে।
+
+
+16 > Error 
+    ১৬ > adb kill-server                                       
+    PS D:\smartphone-application-design\FrontEnd> adb start-server                                      
+    PS D:\smartphone-application-design\FrontEnd> adb devices                                           
+    List of devices attached
+    emulator-5554   device
+
+    PS D:\smartphone-application-design\FrontEnd> ionic capacitor run android                           
+    [ERROR] No devices or emulators found
+    PS D:\smartphone-application-design\FrontEnd> ionic capacitor run android --emulator="emulator-5554"
+    [ERROR] No devices or emulators found
+    PS D:\smartphone-application-design\FrontEnd>
+    ChatGPT
+    It appears that you have restarted the ADB server, and your emulator (emulator-5554) is detected by adb devices, but you are still encountering the "No devices or emulators found" error when trying to run your Ionic Capacitor Android application.
+
+    Here are some additional steps you can try:
+
+    Check Emulator State: Ensure that your emulator is fully booted and in a usable state. Sometimes, even if the emulator is listed by adb devices, it may not be fully ready to accept application installations.
+
+    Wait for Emulator to Boot: If you recently started the emulator, give it some time to fully boot and stabilize before trying to deploy your application to it.
+
+    Check Target Version: Verify that your Ionic Capacitor project is configured to target the same Android version as your emulator. You can check this in the android/app/build.gradle file, under the android block.
+
+    Try a Different Emulator: If the emulator "emulator-5554" is still causing issues, try creating a new emulator instance using Android Studio or try using a different emulator that you know is working correctly.
+
+    Restart Capacitor: Sometimes, restarting the Capacitor server can help. Run the following command to stop the Capacitor server:
+
+    arduino
+    Copy code
+    npx cap server stop
+    Then, start it again:
+
+    bash
+    Copy code
+    npx cap server
+    Check Android Studio Configuration: Ensure that your Android Studio environment is set up correctly, and there are no configuration issues related to emulators or SDK paths.
+
+    Check Ionic Configuration: Double-check your Ionic project configuration files, including capacitor.config.json, to make sure they are correctly set up for Android development.
+
+    Update Gradle: Make sure your Gradle version is up-to-date by checking the gradle-wrapper.properties file in the android directory of your Ionic project. You can update it to the latest stable version if needed.
+
+    Clean and Rebuild: Sometimes, a clean build can resolve issues. In your Ionic project's android directory, you can run:
+
+    bash
+    Copy code
+    ./gradlew clean
+    And then try running your Ionic application again.
+
+    Check Logcat: If none of the above steps work, you can also check the Logcat logs for any specific errors or issues related to your application or the emulator. Use the adb logcat command to view the logs.
+
+    If you are still facing issues after trying these steps, please provide any error messages or additional information from the logs that might help pinpoint the problem.
+
+
+
+
+    The error message you're encountering, "android platform has not been added yet," indicates that Capacitor hasn't been properly set up for the Android platform in your project. To add the Android platform to your Capacitor project, you can follow these steps:
+
+    Open a terminal/command prompt and navigate to your project's root directory where your capacitor.config.json file is located.
+
+    Run the following command to add the Android platform to your project:
+
+    bash
+    Copy code
+    npx cap add android
+    This command will add the Android platform to your Capacitor project and configure it for Android development.
+
+    After adding the Android platform, you can try running the sync command again:
+
+    bash
+    Copy code
+    npx cap sync android
+    Once the sync is successful, you can try running your Ionic app on Android using the following command:
+
+    bash
+    Copy code
+    npx cap run android
+    Make sure you have the Android SDK and required dependencies installed on your system, and that your Android device or emulator is correctly set up and connected.
+
+    If you encounter any additional issues or errors during this process, please provide more details, and I'll do my best to assist you further.
+
+
+
+
+17 > ionic build --prod
+    ১৮ > ionic build --prod কমান্ডটি Ionic এপ্লিকেশন টি প্রোডাকশন (Production) মোডে বিল্ড করার কাজ করে। এই কমান্ডটি এপ্লিকেশনের পারফরম্যান্স ও সাইজ অপ্টিমাইজ করার জন্য ব্যবহৃত হয়। নিম্নলিখিত পরিবর্তনগুলি সম্পন্ন হয় এই কমান্ড চালানোর পরে:
+
+    এড অফ টাইম (Ahead of Time) কম্পাইলেশন: ইউজারের ব্রাউজারে কোড রান করার আগে, এই কমান্ডটি কোডটির অগ্রিম কম্পাইলেশন (AOT) করে ফেলে। AOT কম্পাইলেশন এপ্লিকেশনের টেমপ্লেট ও কম্পোনেন্টগুলি কোডে স্থানান্তর করে, যেটি ব্রাউজারে দ্রুত রেন্ডার করে।
+
+    মিনিফিকেশন (Minification): জাভাস্ক্রিপ্ট ও সিএসএস ফাইলগুলি মিনিফাই হয়, অর্থাৎ অপ্রয়োজনীয় স্পেস, কমেন্ট, ও বড় ভ্যারিয়েবল নেম মুছে ফেলা হয় যাতে ফাইলের সাইজ কমে যায়।
+
+    ট্রি শেকিং (Tree Shaking): ট্রি শেকিং হলো আপ্রয়োজনীয় কোড বা কম্পোনেন্ট গুলি যেটি ব্যবহৃত হয় না, তা সেগুলি বড় ফাইল থেকে বাদ দেয়া। এটি ফাইলের আকার কমানোর জন্য ব্যবহৃত হয়।
+
+    ডেড কোড ইলিমিনেশন (Dead Code Elimination): এই অপ্টিমাইজেশনটি আপ্রয়োজনীয় না থাকা কোড পরিষ্কার করে ফেলে।
+
+    প্রোডাকশন এনভায়রনমেন্ট: এই কমান্ডটি আপ্লিকেশনকে প্রোডাকশন এনভায়রনমেন্টে পাঠায়, যা ডেবাগ মোড বন্ধ করে এবং প্রোডাকশন API এনডপয়েন্ট ব্যবহার করে।
+
+    অপ্টিমাইজড ইমেজ: ইমেজ ফাইলগুলি সংক্ষেপিত ও অপ্টিমাইজ হয় তাদের ফাইল সাইজ কমিয়ে দেওয়ার সাথে মানকে সংরক্ষণ করে।
+
+    হ্যাশ বেইস্ড ফাইল নেম: ফাইলগুলি সাধারণভাবে হ্যাশ-ভিত্তিক নাম পান, যা ব্রাউজার ক্যাশিং করতে সাহায্য করে এবং যতটুকু নতুন আপডেট প্রদান করা হোক, সে সাথে এপ্লিকেশন সবসময় নতুন ভার
+
+
+
+
+
+
+
+Cmpnt = Components 
+Pg = Page 
