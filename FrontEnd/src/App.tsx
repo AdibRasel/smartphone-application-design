@@ -3,6 +3,8 @@ import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Loginpg from './pages/Login_Pg/Login_pg';
 
+// import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
 
 // Global css start 
 import "./assets/css/style.css"
@@ -13,18 +15,35 @@ import Registration_pg from './pages/Registration_pg/Registration_pg';
 setupIonicReact();
 
 const App: React.FC = () => (
+
+
+
+
+
+
   <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
+
+
+    {/* <TransitionGroup>
+      <CSSTransition
+        key={location.key}
+        classNames="fade"
+        timeout={300}
+      ></CSSTransition> */}
+
+
+
+      <IonReactRouter>
+        <IonRouterOutlet>
 
 
 
 
-        {/* Routing Start  */}
+          {/* Routing Start  */}
 
           {/* home rout start  */}
-          <Route exact path="/home"> <Loginpg /></Route>
-          <Route exact path="/"><Redirect to="/home" /></Route>
+          <Route exact path="/Login"> <Loginpg /></Route>
+          <Route exact path="/"><Redirect to="/Login" /></Route>
           {/* Home Route end  */}
 
 
@@ -33,18 +52,24 @@ const App: React.FC = () => (
           {/* All Page Start  */}
 
 
-          
 
 
 
 
-        {/* Routing end  */}
+
+          {/* Routing end  */}
 
 
 
 
-      </IonRouterOutlet>
-    </IonReactRouter>
+        </IonRouterOutlet>
+      </IonReactRouter>
+
+
+    {/* </TransitionGroup> */}
+
+
+
   </IonApp>
 );
 

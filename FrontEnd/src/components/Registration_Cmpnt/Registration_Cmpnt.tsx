@@ -1,6 +1,6 @@
 import React from 'react'
 import { IonInput } from '@ionic/react';
-
+import { Link } from 'react-router-dom';
 
 import "./Registration_Cmpnt.css"
 
@@ -58,7 +58,9 @@ const Registration_Cmpnt = () => {
                 </div>
 
                 <div className="Bootom_Section_RightRg">
-                    <span>Login</span>
+                    <Link to="/Login">
+                        <span>Login</span>
+                    </Link>
                 </div>
 
             </div>
