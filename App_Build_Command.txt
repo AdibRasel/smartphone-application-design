@@ -1,0 +1,48 @@
+Convert React Application into APK installation file(Ionic/Capacitor)
+
+1. We need to install ionic cli 1st
+-> npm install -g @ionic/cli
+
+2. Install Capacitor
+-> npm install @capacitor/core @capacitor/cli
+
+3. Init Capacitor in our project 
+-> npx cap init
+	Name ="AppName"
+	Package ID ="App Web Address, Like www.appname.com"
+-> type in the details in windos cli
+
+4. Install Capacitor Android CLI
+-> npm install @capacitor/android
+
+5> Build our files
+-> ionic init --> choose react as ours one is react app
+-> ionic build
+
+6. Add android conig files 
+-> npx cap add android
+
+7. A folder named android will be created. Open it using android studio. 
+
+8. wait for android studio building finis.
+
+9. Try run using android simulator
+
+10. It build succesfully
+
+11. Next, we generate the apk. 
+
+12. Android Studio Software Open...
+Build Menu > 
+Generate Signed Builde/APk >
+APK Select > Next Button > 
+
+12.1 To generate apk relese version, we need to have a key store. you can either generate a new one or using a existing one. In youtube case, I'll use an existing one. 
+
+13. Choose release, and check v2 (Full APK Signature) 
+
+14. wait for it to build finish.
+
+15. The generated relase APK will be located in relese folder. 
+
+That's all the steps to add ionic/capacitor into existing react js app and generate it into apk. the apk can be used by just installing in mobile phone or publish in playstore.  

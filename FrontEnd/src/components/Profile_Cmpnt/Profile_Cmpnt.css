@@ -1,0 +1,81 @@
+.FullApp {
+    background-color: #ffcfb0;
+}
+
+
+
+/* Full_App_Pforile_page start  */
+.Full_App_Pforile_page {
+    background-image: url(../../assets/image/Profile_Background.png);
+    min-width: 400px;
+    max-width: 95%;
+    min-height: 700px;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: cover;
+}
+
+/* Full_App_Pforile_page end  */
+
+
+
+
+
+
+
+
+/* Profile_Info_Show start  */
+.Profile_Info_Show {
+    height: 225px;
+    border-bottom: 8px solid white;
+    display: flex;
+    margin: auto;
+}
+
+
+.Profile_Info_Show_img{
+    width: 40%;
+}
+
+.Profile_Info_Show_img img{
+    width: 120px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 30px 10px 50px 20px;
+}
+
+
+.Profile_Info_Show_text{
+    padding-top: 30px;
+    padding-left: 10px;
+    color: #2f2460;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.Profile_Info_Show_Tite{
+    color: #2f2460;
+    font-size: 20px;
+}
+
+.Profile_Info_Show_text span{
+    border-bottom: 1px solid white;
+}
+
+
+
+.Profile_Info_Show_btn{
+    display: flex;
+    margin-top: 20px;
+}
+
+.Profile_Info_Show_btn_left{
+    margin-right: 30px;
+}
+.Profile_Info_Show_btn_left, .Profile_Info_Show_btn_right{
+    border: 1px solid #2f2460;
+    padding: 3px;
+    border-radius: 10px;
+}
+/* Profile_Info_Show end */

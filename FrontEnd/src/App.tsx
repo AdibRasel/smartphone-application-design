@@ -9,6 +9,7 @@ import Loginpg from './pages/Login_Pg/Login_pg';
 // Global css start 
 import "./assets/css/style.css"
 import Registration_pg from './pages/Registration_pg/Registration_pg';
+import Profile_Pg from './pages/Profile_Pg/Profile_Pg';
 
 
 
@@ -49,6 +50,7 @@ const App: React.FC = () => (
 
           {/* All Page Start  */}
           <Route exact path="/Registration"> <Registration_pg /></Route>
+          <Route exact path="/Profile"> <Profile_Pg /></Route>
           {/* All Page Start  */}
 
 

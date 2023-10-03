@@ -1,0 +1,9 @@
+.Menu_Title {
+    display: flex;
+}
+
+.Menu_Title_Profile {
+    color: #2f2460;
+    margin-left: auto;
+    text-align: center;
+}
