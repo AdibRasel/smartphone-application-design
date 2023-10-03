@@ -1,9 +1,14 @@
 .Menu_Title {
     display: flex;
 }
+.MenuBg{
+    background-color: #2E2460 !important;
+    --background: var(--ion-menu-background);
+    color: white;
+}
 
 .Menu_Title_Profile {
-    color: #2f2460;
+    color: white;
     margin-left: auto;
     text-align: center;
 }

@@ -34,11 +34,11 @@
 }
 
 
-.Profile_Info_Show_img{
+.Profile_Info_Show_img {
     width: 40%;
 }
 
-.Profile_Info_Show_img img{
+.Profile_Info_Show_img img {
     width: 120px;
     border-radius: 50%;
     border: 2px solid white;
@@ -46,7 +46,7 @@
 }
 
 
-.Profile_Info_Show_text{
+.Profile_Info_Show_text {
     padding-top: 30px;
     padding-left: 10px;
     color: #2f2460;
@@ -54,28 +54,86 @@
     line-height: 25px;
 }
 
-.Profile_Info_Show_Tite{
+.Profile_Info_Show_Tite {
     color: #2f2460;
     font-size: 20px;
 }
 
-.Profile_Info_Show_text span{
-    border-bottom: 1px solid white;
+.Profile_Info_Show_text span {
+    border-bottom: 1px solid #ffcfb0;
+    height: 100vh;
+}
+
+.Profile_Info_Show_text span svg {
+    /* margin-top: 1px; */
 }
 
 
-
-.Profile_Info_Show_btn{
+.Profile_Info_Show_btn {
     display: flex;
     margin-top: 20px;
 }
 
-.Profile_Info_Show_btn_left{
+.Profile_Info_Show_btn_left {
     margin-right: 30px;
 }
-.Profile_Info_Show_btn_left, .Profile_Info_Show_btn_right{
+
+.Profile_Info_Show_btn_left,
+.Profile_Info_Show_btn_right {
     border: 1px solid #2f2460;
     padding: 3px;
     border-radius: 10px;
 }
+
 /* Profile_Info_Show end */
+
+
+
+
+
+
+
+
+
+
+/* Profile_Menu_Item_Box start  */
+.Profile_Menu_Item_Box{
+    width: 85%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.Profile_Menu_Item_Title{
+    background-color: white;
+    padding: 7px;
+    margin-bottom: 8px;
+    border-left: 10px solid #E86243;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.Profile_Menu_Item_Title_Left{
+
+}
+.Profile_Menu_Item_Title_Left span{
+    padding-left: 10px;
+}
+
+.Profile_Menu_Item_Title_Right{
+    margin-left: auto;
+}
+
+
+
+
+
+.TolBar{
+
+}
+.TolBar img{
+    width: 100%;
+}
+/* Profile_Menu_Item_Box end  */

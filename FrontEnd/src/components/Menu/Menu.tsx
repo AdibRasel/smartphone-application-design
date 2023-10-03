@@ -17,11 +17,11 @@ function Menu() {
       </IonMenu>
       <IonPage id="main-content">
         <IonHeader>
-          <IonToolbar>
+          <IonToolbar className='MenuBg'>
             <IonButtons slot="start">
               <IonMenuButton></IonMenuButton>
             </IonButtons>
-            <div className="Menu_Title">
+            <div className="Menu_Title MenuBg" >
                 <IonTitle>Menu</IonTitle>
                 <IonTitle className='Menu_Title_Profile'>Your Profile</IonTitle>
             </div>
