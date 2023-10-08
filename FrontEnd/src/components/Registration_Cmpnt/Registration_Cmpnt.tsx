@@ -19,8 +19,8 @@ const Registration_Cmpnt = () => {
                 <img src={ProfileImage} alt="" />
 
                 <div className="RgTitle">
-                    <h2>CREATE </h2>
-                    <h1> ACCOUNT</h1>
+                    <h2>CREATE</h2>
+                    <h1>ACCOUNT</h1>
                 </div>
             </div>
             {/* Registration Image serction start */}
@@ -57,11 +57,6 @@ const Registration_Cmpnt = () => {
 
 
 
-
-
-
-
-
             {/* Login or forgate Password section start  */}
             <div className="Bottom_SectionRg">
                 <div className="Bootom_Section_LeftRg">
@@ -76,14 +71,6 @@ const Registration_Cmpnt = () => {
 
             </div>
             {/* Login or forgate Password section end  */}
-
-
-
-
-
-
-
-
 
 
 

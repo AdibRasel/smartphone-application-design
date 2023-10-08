@@ -24,7 +24,7 @@ const Profile_Cmpnt = () => {
 
 
 
-  return (<div className="FullApp" >
+return (<div className="FullApp" >
 
     <div className='Full_App_Pforile_page'>
       {/* Menu Start  */}

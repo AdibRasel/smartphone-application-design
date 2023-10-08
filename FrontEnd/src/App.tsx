@@ -3,13 +3,18 @@ import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Loginpg from './pages/Login_Pg/Login_pg';
 
-// import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
+// Bootstrap css import 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Global css start 
 import "./assets/css/style.css"
+
 import Registration_pg from './pages/Registration_pg/Registration_pg';
 import Profile_Pg from './pages/Profile_Pg/Profile_Pg';
+import Index from './Index';
+import Home from './pages/FinApp_Pages/Home/Home';
+import Transport_Allowance_Page from './pages/Transport_Allowance_Page/Transport_Allowance_Page';
 
 
 
@@ -23,54 +28,51 @@ const App: React.FC = () => (
 
 
   <IonApp>
-
-
-    {/* <TransitionGroup>
-      <CSSTransition
-        key={location.key}
-        classNames="fade"
-        timeout={300}
-      ></CSSTransition> */}
-
-
-
-      <IonReactRouter>
-        <IonRouterOutlet>
+    <IonReactRouter>
+      <IonRouterOutlet>
 
 
 
 
-          {/* Routing Start  */}
+        {/* Routing Start  */}
 
-          {/* home rout start  */}
-          <Route exact path="/Login"> <Loginpg /></Route>
-          <Route exact path="/"><Redirect to="/Login" /></Route>
-          {/* Home Route end  */}
-
-
-          {/* All Page Start  */}
-          <Route exact path="/Registration"> <Registration_pg /></Route>
-          <Route exact path="/Profile"> <Profile_Pg /></Route>
-          {/* All Page Start  */}
+        <Route exact path="/home"> <Index /></Route>
+        <Route exact path="/"><Redirect to="/home" /></Route>
 
 
 
+        {/* Urban It Solution Route Start  */}
+        <Route exact path="/Login"> <Loginpg /></Route>
 
+        <Route exact path="/Registration"> <Registration_pg /></Route>
 
-
-
-          {/* Routing end  */}
+        <Route exact path="/Profile"> <Profile_Pg /></Route>
+        {/* Urban It Solution Route end  */}
 
 
 
 
-        </IonRouterOutlet>
-      </IonReactRouter>
+        {/* FinApp Route Start  */}
+
+        <Route exact path="/FinAppHome"> <Home /></Route>
+        <Route exact path="/TransportAllowance"> <Transport_Allowance_Page /></Route>
 
 
-    {/* </TransitionGroup> */}
 
 
+        {/* FinApp Route End  */}
+
+
+
+
+
+        {/* Routing end  */}
+
+
+
+
+      </IonRouterOutlet>
+    </IonReactRouter>
 
   </IonApp>
 );
